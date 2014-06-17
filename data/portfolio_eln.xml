@@ -1,0 +1,20 @@
+<portfolio>
+
+  <contract>
+    <contract_category>         equity_linked_note  </contract_category>
+    <contract_id>               XS9234123           </contract_id>
+
+    <equity_linked_note>
+      <start_date>              25-Aug-2010         </start_date>
+      <final_observation_date>  25-Aug-2011         </final_observation_date>
+      <final_settlement_date>   25-Sep-2011         </final_settlement_date>
+      <strike_price>            120                 </strike_price>
+      <notional>                1                   </notional>
+      <notional_currency>       USD                 </notional_currency>
+      <underlying_stock_id>     0005.HK             </underlying_stock_id>
+      <stock_id_type>           EXCHANGE            </stock_id_type>
+    </equity_linked_note>
+
+  </contract>
+
+</portfolio>

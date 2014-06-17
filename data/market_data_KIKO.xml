@@ -1,0 +1,139 @@
+<market_data>
+
+  <!-- eval_date can be either a date string such as 15-May-2015 or 'today'. -->
+  <eval_date>                                today </eval_date>
+  
+  <!-- ___________________________________________________________________________ -->
+ 
+  <risk_free_rates>  
+    <risk_free_rate>
+      <currency>HKD</currency>
+      <flat_rate>0.03</flat_rate>
+    </risk_free_rate>
+
+    <risk_free_rate>
+      <currency>USD</currency>
+      <flat_rate>0.02</flat_rate>
+    </risk_free_rate>
+
+    <risk_free_rate>
+      <currency>JPY</currency>
+      <flat_rate>0.01</flat_rate>
+    </risk_free_rate>
+
+
+  </risk_free_rates>
+
+  <!-- ___________________________________________________________________________ -->
+
+  <fx_vols>
+
+    <fx_vol>
+      <ccy1>JPY</ccy1>
+      <ccy2>AUD</ccy2>
+      <vol>0.33</vol>
+    </fx_vol>
+
+    <fx_vol>
+      <ccy1>JPY</ccy1>
+      <ccy2>USD</ccy2>
+      <vol>0.42</vol>
+    </fx_vol>
+
+  </fx_vols>
+
+  <!-- ___________________________________________________________________________ -->
+
+  <stock_data>
+
+    <stock>
+      <id>0005.HK</id>
+      <id_type>EXCHANGE</id_type>
+
+      <currency>HKD</currency>
+
+      <name>HSBC Holdings</name>
+      <exchange>HKX</exchange>
+      <holiday_calendar>HKX</holiday_calendar>
+
+      <flat_vol>0.28</flat_vol>
+      <credit_spread>0.0</credit_spread> <!-- very relevant when this firm is the issuer -->
+    </stock>
+
+    <stock>
+      <id>NED_WATERSCHAPS</id>
+      <id_type>EXCHANGE</id_type>
+      <credit_spread>0.01</credit_spread>
+    </stock>
+    
+    <stock>
+      <id>          CSGN.VX  </id>
+      <id_type>         RIC </id_type>
+      <credit_spread>  0.01 </credit_spread>
+    </stock>
+
+    <stock>
+      <id>        N225 </id>
+      <id_type>   RIC  </id_type>
+      <flat_vol>  0.22 </flat_vol>
+      
+    </stock>
+    
+  </stock_data>
+
+   <prices>
+     
+     <item>
+       <id>N225</id>
+        <id_type>RIC</id_type>
+        <current_price>9251</current_price>
+     </item>
+  
+  </prices>  
+  
+  <!-- ___________________________________________________________________________ -->
+
+  <calendars>
+    <calendar>
+      <id>TOK</id>
+      <holiday>01-Jan-2010</holiday>
+      <holiday>13-Feb-2010</holiday>
+    </calendar>
+
+    <calendar>
+      <id>NYC</id>
+      <holiday>06-Jan-2010</holiday>
+      <holiday>11-Feb-2010</holiday>
+    </calendar>
+
+    <calendar>
+      <id>LON</id>
+      <holiday>07-Jan-2010</holiday>
+      <holiday>12-Feb-2010</holiday>
+    </calendar>
+
+    <calendar>
+      <id>HKX</id>
+      <holiday>08-Jan-2010</holiday>
+      <holiday>10-Feb-2010</holiday> 
+      <holiday>15-Feb-2010</holiday>
+      <holiday>16-Feb-2010</holiday>
+      <holiday>02-Apr-2010</holiday>
+      <holiday>05-Apr-2010</holiday>
+      <holiday>06-Apr-2010</holiday>
+      <holiday>01-May-2010</holiday>
+      <holiday>21-May-2010</holiday>
+      <holiday>16-Jun-2010</holiday>
+      <holiday>01-Jul-2010</holiday>
+      <holiday>23-Jul-2010</holiday>
+      <holiday>01-Oct-2010</holiday>
+      <holiday>24-Dec-2010</holiday>
+      <holiday>27-Dec-2010</holiday>
+      <holiday>31-Dec-2010</holiday> 
+    </calendar>
+
+  </calendars>
+
+  <!-- ___________________________________________________________________________ -->
+
+</market_data>

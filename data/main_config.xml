@@ -1,0 +1,78 @@
+<config>
+  <!-- Can't have two elements with the same tag. -->
+
+  <!-- a date format of say 'd-mmm-yyyy' will use date string such as: "6-Aug-2015" -->
+  <date_format>                         d-mmm-yyyy </date_format>
+
+  <!-- eval_date can be either a date string or 'today'. -->
+  <eval_date>                                today </eval_date>  
+
+  <market_data_source_default>             xmlfile </market_data_source_default>
+  <!-- If the path contains no directory but only a filename
+       then the current directory will be used.             -->
+  <market_data_xml_path> c:/sateek/market_data.xml </market_data_xml_path>
+
+  <prices_source>                          xmlfile </prices_source>
+  <prices_xml_path>    c:/sateek/market_prices.xml </prices_xml_path>
+
+  <portfolio_source>                       xmlfile </portfolio_source>
+  <!-- If the path contains no directory but only a filename
+       then the current directory will be used.             
+       example files: c:/sateek/portfolio_eln_and_convert.xml
+                      c:/sateek/portfolio_accumulator.xml 
+                      c:/sateek/portfolio_range_accrual.xml
+                      c:/sateek/portfolio_full.xml
+                      c:/sateek/portfolio_call_spread_cpn_note.xml
+  -->
+  <portfolio_xml_path> c:/sateek/portfolio_call_spread_cpn_note.xml </portfolio_xml_path> 
+
+  <!-- can have 'std_out' and or 'write_to_file' (separated from eachother by some white-space). -->
+  <output>
+    std_out
+    write_to_file
+  </output>
+
+  <!-- e.g. c:/web, can also use '.' for current directory. -->
+  <output_directory>             c:/sateek/results </output_directory>
+
+  <!-- can be 'short' or default 'long', (perhaps could impliment 'unique') -->
+  <output_filename_short_or_long>             long </output_filename_short_or_long>
+
+
+  <!-- Convertible bonds are priced using trees.
+       When we have convertible bonds in the input portfolio, 
+       need to specify the number of time-steps in the tree, 
+       recommend 1,000 -->
+  <convertible_bond_time_steps>                130 </convertible_bond_time_steps>
+  <call_spread_cpn_note_tree_time_steps>       400 </call_spread_cpn_note_tree_time_steps>
+ 
+  <!-- recommend 50,000 mc samples -->
+  <accumulator_num_mc_samples>                1110 </accumulator_num_mc_samples>
+  <range_accrual_num_mc_samples>               120 </range_accrual_num_mc_samples>
+  
+  <random_generator_seed>                        2 </random_generator_seed>
+
+  <diagnostics> <!-- The level of diagnostics message to be reported 
+                     can be 'none', 'low', 'mid', 'high' or 'full'. 
+                     Even if 'none' is chosen here, the programmer can over-ride that
+                     and report a message, if he deems it to be very important.
+                     Recommended level is 'low', which is the default.
+                  -->
+    <default_level>                            low </default_level>
+
+    <!-- The diagnostics can be turned on for a specific 'source'. 
+         You need to look in the code an see what the 'source' string has been set to.
+         Then use the same string here as the 'source'. -->
+    <setting>
+      <source>                   reportElapsedTime </source>
+      <allowed_level>                          mid </allowed_level>
+    </setting>
+
+  </diagnostics>
+  
+  <!-- other tags that could be used:
+           fx_vol_xml_filename
+           fx_spot_xml_filename
+  -->
+
+</config>

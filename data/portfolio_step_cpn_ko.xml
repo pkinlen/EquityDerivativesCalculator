@@ -1,0 +1,31 @@
+<portfolio>
+  <contract>
+    <contract_category>    step_cpn_ko </contract_category>
+    <contract_id> step_cpn_ko_Deutsche </contract_id>
+    
+    <step_cpn_ko>
+      <underlying_type>             fx </underlying_type>
+      <accounting_ccy>             USD </accounting_ccy> <!-- AKA accounting currency -->
+      <underlying_ccy>             JPY </underlying_ccy>
+      <underlying_id_type>     fx_pair </underlying_id_type>
+      <issue_date>          2-Apr-2010 </issue_date>
+      <maturity_date>       2-Apr-2015 </maturity_date>
+      <months_per_period>            6 </months_per_period>
+      <low_cpn>                  0.001 </low_cpn>
+      <high_cpn>                 0.080 </high_cpn>
+      <cpn_barrier>              0.114 </cpn_barrier>
+      <ko_barrier>             0.14753 </ko_barrier>
+      <ko_redemption_in_acc_ccy>  1.00 </ko_redemption_in_acc_ccy>
+      <mat_redemption_in_undl_ccy> 7.45612072950685   </mat_redemption_in_undl_ccy>        <!-- 1 / 0.134118 -->
+      <settlement_lag>               3 </settlement_lag>  <!--Num bus days from obs to settle -->
+      <notional>               1000000 </notional>
+      
+      <holiday_calendars>  
+         <id>TOK</id>
+         <id>NYC</id>
+         <id>LON</id>
+      </holiday_calendars>
+      
+    </step_cpn_ko>    
+  </contract>
+</portfolio>

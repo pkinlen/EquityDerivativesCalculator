@@ -1,0 +1,259 @@
+<market_data>
+
+  <!-- eval_date can be either a date string such as 15-May-2015 or 'today'. -->
+  <eval_date>                              15-May-2010 </eval_date>
+  
+  <!-- ___________________________________________________________________________ -->
+
+  <interest_rate_data>
+
+    <instrument_sets>
+      <instrument_set>
+        <currency>                       USD </currency>
+        <instrument>
+          <category>                 deposit </category> <!-- should be 'deposit', 'swap' or 'futures' -->
+          <tenor>                         3m </tenor>    <!-- for example 1d (1 day), 3w (3 weeks), 6m (6 months), 5y ( 5 years) -->
+          <rate>                        0.02 </rate>
+        </instrument>
+        <instrument>
+          <category>                    swap </category>
+          <tenor>                         5y </tenor>
+          <rate>                        0.01 </rate>
+        </instrument>
+        <instrument>
+          <category>                    swap </category>
+          <tenor>                        10y </tenor>
+          <rate>                        0.02 </rate>
+        </instrument>
+      </instrument_set>
+
+      <instrument_set>
+        <currency>                       JPY </currency>
+        <instrument>
+          <category>                 deposit </category>
+          <!-- should be 'deposit', 'swap' or 'future' -->
+          <tenor>                         6m </tenor>
+          <!-- for example 1d (1 day), 3w (3 weeks), 6m (6 months), 5y ( 5 years) -->
+          <rate>                        0.03 </rate>
+        </instrument>
+        <instrument>
+          <category>                    swap </category>
+          <tenor>                         5y </tenor>
+          <rate>                        0.04 </rate>
+        </instrument>
+        <instrument>
+          <category>                    swap </category>
+          <tenor>                        20y </tenor>
+          <rate>                        0.045 </rate>
+        </instrument>
+      </instrument_set>
+
+      <instrument_set>
+        <currency>                       HKD </currency>
+        <instrument>
+          <category>                    swap </category> <!-- should be 'deposit', 'swap' or 'future' -->
+          <tenor>                         5y </tenor>    <!-- for example 1d (1 day), 3w (3 weeks), 6m (6 months), 5y ( 5 years) -->
+          <rate>                        0.03 </rate>
+        </instrument>
+      </instrument_set>
+      
+    </instrument_sets>
+    
+    <risk_free_rates>  
+      <risk_free_rate>
+        <currency>         HKD </currency>
+        <flat_rate>       0.25 </flat_rate>
+      </risk_free_rate>
+
+      <risk_free_rate>
+        <currency>         JPY </currency>
+        <flat_rate>       0.02 </flat_rate>
+      </risk_free_rate>
+
+      <risk_free_rate>
+        <currency>         USD </currency>
+        <flat_rate>       0.12 </flat_rate>
+      </risk_free_rate>
+    </risk_free_rates>
+
+  </interest_rate_data>
+
+  <!-- ___________________________________________________________________________ -->
+
+  <fx_vols>
+
+    <fx_vol>
+      <ccy1>JPY</ccy1>
+      <ccy2>AUD</ccy2>
+      <vol>0.33</vol>
+    </fx_vol>
+
+    <fx_vol>
+      <ccy1>JPY</ccy1>
+      <ccy2>USD</ccy2>
+      <vol>0.42</vol>
+    </fx_vol>
+
+  </fx_vols>
+
+  <!-- ___________________________________________________________________________ -->
+
+  <equity_data>
+
+    <equity>
+      <id>             0005.HK </id>
+      <id_type>            ric </id_type>
+      <currency>           HKD </currency>
+      <name>     HSBC Holdings </name>
+      <exchange>           HKX </exchange>
+      <holiday_calendar>   HKX </holiday_calendar>
+      <dividend_yield>  0.0000 </dividend_yield>
+      <flat_vol>        0.4230 </flat_vol>
+      <repo_rate>       0.0600 </repo_rate>
+      <credit_spread>   0.0000 </credit_spread> <!-- very relevant when this firm is the issuer -->
+    </equity>
+
+    <equity>
+      <id>      NED_WATERSCHAPS </id>
+      <id_type>        EXCHANGE </id_type>
+      <credit_spread>      0.01 </credit_spread>
+    </equity>
+    
+    <equity>
+      <id>             0011.HK </id>
+      <id_type>            RIC </id_type>
+      <currency>           HKD </currency>
+      <name>    Hang Sang Bank </name>
+      <exchange>           HKX </exchange>
+      <holiday_calendar>   HKX </holiday_calendar>
+      <flat_vol>        0.0200 </flat_vol>
+      <credit_spread>   0.0250 </credit_spread>
+      <repo_rate>       0.0000 </repo_rate>
+      <!-- very relevant when this firm is the issuer -->
+    </equity>
+
+    <equity>
+      <id>0004.HK</id>
+      <!-- deliberately no data! -->
+    </equity>
+    
+  </equity_data>
+
+  <!-- ___________________________________________________________________________ -->
+
+  <calendars>
+    <calendar>
+      <id>TOK</id>
+      <holiday>01-Jan-2010</holiday>
+      <holiday>11-Jan-2010</holiday>
+      <holiday>11-Feb-2010</holiday>
+      <holiday>22-Mar-2010</holiday>
+      <holiday>29-Apr-2010</holiday>
+      <holiday>03-May-2010</holiday>
+      <holiday>04-May-2010</holiday>
+      <holiday>05-May-2010</holiday>
+      <holiday>19-Jul-2010</holiday>
+      <holiday>20-Sep-2010</holiday>
+      <holiday>23-Sep-2010</holiday>
+      <holiday>11-Oct-2010</holiday>
+      <holiday>03-Nov-2010</holiday>
+      <holiday>23-Nov-2010</holiday>
+      <holiday>23-Dec-2010</holiday>
+      <holiday>31-Dec-2010</holiday>
+    </calendar>
+
+    <calendar>
+      <id>LON</id>
+      <holiday>01-Jan-2010</holiday>
+      <holiday>02-Apr-2010</holiday>
+      <holiday>05-Apr-2010</holiday>
+      <holiday>31-May-2010</holiday>
+      <holiday>30-Aug-2010</holiday>
+    </calendar>
+
+    <calendar>
+        <id>NYC</id>
+        <holiday>01-Jan-2010</holiday>
+        <holiday>18-Jan-2010</holiday>
+        <holiday>15-Feb-2010</holiday>
+        <holiday>02-Apr-2010</holiday>
+        <holiday>31-May-2010</holiday>
+        <holiday>05-Jul-2010</holiday>
+        <holiday>06-Sep-2010</holiday>
+        <holiday>25-Nov-2010</holiday>
+        <holiday>26-Nov-2010</holiday>
+        <holiday>24-Dec-2010</holiday>
+        <holiday>17-Jan-2011</holiday>
+        <holiday>21-Feb-2011</holiday>
+        <holiday>22-Apr-2011</holiday>
+        <holiday>30-May-2011</holiday>
+        <holiday>04-Jul-2011</holiday>
+        <holiday>05-Sep-2011</holiday>
+        <holiday>24-Nov-2011</holiday>
+        <holiday>26-Dec-2011</holiday>
+      </calendar>
+
+      <calendar>
+        <id>HKG</id>
+        <holiday>01-Jan-2010</holiday>
+        <holiday>15-Feb-2010</holiday>
+        <holiday>16-Feb-2010</holiday>
+        <holiday>02-Apr-2010</holiday>
+        <holiday>05-Apr-2010</holiday>
+        <holiday>06-Apr-2010</holiday>
+        <holiday>21-May-2010</holiday>
+        <holiday>16-Jun-2010</holiday>
+        <holiday>01-Jul-2010</holiday>
+        <holiday>23-Sep-2010</holiday>
+        <holiday>01-Oct-2010</holiday>
+        <holiday>27-Dec-2010</holiday>
+        <holiday>03-Feb-2011</holiday>
+        <holiday>04-Feb-2011</holiday>
+        <holiday>05-Apr-2011</holiday>
+        <holiday>22-Apr-2011</holiday>
+        <holiday>25-Apr-2011</holiday>
+        <holiday>02-May-2011</holiday>
+        <holiday>10-May-2011</holiday>
+        <holiday>06-Jun-2011</holiday>
+        <holiday>01-Jul-2011</holiday>
+        <holiday>13-Sep-2011</holiday>
+        <holiday>05-Oct-2011</holiday>
+        <holiday>26-Dec-2011</holiday>
+        <holiday>27-Dec-2011</holiday>
+      </calendar>
+
+      <calendar>
+        <id>SGX</id>
+        <holiday>01-Jan-2010</holiday>
+        <holiday>15-Feb-2010</holiday>
+        <holiday>16-Feb-2010</holiday>
+        <holiday>02-Apr-2010</holiday>
+        <holiday>01-May-2010</holiday>
+        <holiday>28-May-2010</holiday>
+        <holiday>09-Aug-2010</holiday>
+        <holiday>10-Sep-2010</holiday>
+        <holiday>05-Nov-2010</holiday>
+        <holiday>17-Nov-2010</holiday>
+        <holiday>03-Feb-2011</holiday>
+        <holiday>04-Feb-2011</holiday>
+        <holiday>22-Apr-2011</holiday>
+        <holiday>02-May-2011</holiday>
+        <holiday>17-May-2011</holiday>
+        <holiday>09-Aug-2011</holiday>
+        <holiday>30-Aug-2011</holiday>
+        <holiday>26-Oct-2011</holiday>
+        <holiday>06-Nov-2011</holiday>
+        <holiday>26-Dec-2011</holiday>
+      </calendar>
+
+      <calendar>
+        <id>DUMMY</id>
+        <holiday>01-Jan-2000</holiday>
+      </calendar>
+
+
+    </calendars>
+
+  <!-- ___________________________________________________________________________ -->
+
+</market_data>

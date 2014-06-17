@@ -1,0 +1,39 @@
+<portfolio>
+  <contract>
+    <contract_category> step_cpn_ki_ko </contract_category>
+    <contract_id> step_cpn_ki_ko_CS_IB </contract_id>
+    
+    <step_cpn_ki_ko>
+      <underlying_type>         equity </underlying_type>
+      <pay_ccy>                    JPY </pay_ccy> <!-- AKA accounting currency -->
+      <underlying_id>             N225 </underlying_id>
+      <underlying_id_type>         RIC </underlying_id_type>
+      <issue_date>         17-Apr-2010 </issue_date>
+      <issuer_id>              CSGN.VX </issuer_id>
+      <issuer_id_type>             RIC </issuer_id_type>
+      <maturity_date>      17-Apr-2015 </maturity_date>
+      <months_per_period>            3 </months_per_period>
+      <low_cpn>                  0.001 </low_cpn>
+      <high_cpn>                 0.045 </high_cpn>
+      <cpn_barrier>            8478.75 </cpn_barrier>
+      <ko_barrier>            11870.25 </ko_barrier>
+      <ko_redemption>             1.00 </ko_redemption>
+      <mat_redemption_when_no_ki> 1.00 </mat_redemption_when_no_ki>
+      <ki_barrier>             6217.75 </ki_barrier>
+      <ki_barrier_obs>              1d </ki_barrier_obs>  <!-- can be: not_active, continuous, 1d, 3m etc -->
+      <floor>                     0.00 </floor>           
+      <cap>                       1.00 </cap>             
+      <scale_factor>   8.845643521E-05 </scale_factor>    <!-- 1 / 11305 = 8.845643521E-05-->
+      <lambda>                    0.00 </lambda>
+      <settlement_lag>               5 </settlement_lag>  <!--Num bus days from obs to settle -->
+      <notional>               1000000 </notional>
+      
+      <holiday_calendars>  
+         <id>TOK</id>
+         <id>NYC</id>
+         <id>LON</id>
+      </holiday_calendars>
+      
+    </step_cpn_ki_ko>    
+  </contract>
+</portfolio>

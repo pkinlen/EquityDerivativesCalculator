@@ -1,0 +1,21 @@
+  <interest_rate_conventions>
+
+    <interest_rate_convention>
+      <currency>                       USD </currency>
+      
+      <depo_fixing_days>                 2 </depo_fixing_days>
+      <depo_cal>                       NYC </depo_cal>
+      <depo_bus_day_convention>  Following </depo_bus_day_convention>
+      <depo_day_counter>            Act365 </depo_day_counter>
+      <depo_end_of_month_roll>       false </depo_end_of_month_roll>
+
+      <swap_settle_days>                 2 </swap_settle_days>
+      <swap_bus_day_convention>  Following </swap_bus_day_convention>
+      <swap_end_of_month_roll>       false </swap_end_of_month_roll>
+      <swap_day_counter>            Act365 </swap_day_counter>
+      <swap_fixed_leg_freq>     Semiannual </swap_fixed_leg_freq>
+    </interest_rate_convention>
+    
+  </interest_rate_conventions>
+  
+  <!-- ___________________________________________________________________________ -->

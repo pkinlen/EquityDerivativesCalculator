@@ -1,0 +1,80 @@
+<portfolio>
+
+  <contract>
+    <contract_category>  call_spread_cpn_note </contract_category>
+    <contract_id>nederland_waterschapsbank_01 </contract_id>
+
+    <call_spread_cpn_note>
+	    <start_date>                08-Nov-2002 </start_date>
+      <final_obs_date>            08-Nov-2032 </final_obs_date>
+      <is_callable>                      true </is_callable>
+      <first_period_issuers_call_active>    1 </first_period_issuers_call_active> <!-- using 1 based counting-->
+      <rebate_per_unit_notional>            1 </rebate_per_unit_notional>
+      <notional>                    500000000 </notional>
+      <months_per_period>                   6 </months_per_period>
+      <underlying_type>                    fx </underlying_type>
+      <accounting_currency>               JPY </accounting_currency> <!-- aka payout currency -->
+      <underlying_currency>               USD </underlying_currency>
+      <settlement_lag>                      3 </settlement_lag>
+      <issuer_id>             NED_WATERSCHAPS </issuer_id>
+      <issuer_id_type>               EXCHANGE </issuer_id_type> 
+        
+      <holiday_calendars>  
+        <id>TOK</id>
+        <id>NYC</id>
+        <id>LON</id>
+      </holiday_calendars>
+   	
+      <!-- 
+	      The calculator can deal with coupons of the form:
+            coupon_paid = min( cap, max( floor, factor * X[t] - strike ) )
+        i.e. a call spread coupon based on the underlying X[t] at the final observation date,
+        at the end of each coupon period.
+        Each of the coupon details has the <start_period> and an <end_period>,
+        we are inclusive of both. The counting uses a base of 1.
+        When we have a fixed coupon we specify the <cap> = <floor> 
+        and <factor> = 'na' also <strike> = 'na'
+        We can also use this calculator as a put-spread, for that you need to specify 
+        <factor> and <strike> both to be negative. 
+        When there is no cap or floor, then can be set to 'na'.
+        Note that when no floor is set, the calculator will allow the coupon to be negative.
+        If the same coupon is to be used until maturity, then <end_period> can be set to 'maturity'.
+        From one period to the next the increments are applied.
+        So if for example in we use a particular coupon_secification from period 4 on wards,
+        then in coupon period 5 the used cap will be <cap> +     <cap_increment>
+        and  in coupon period 6 the used cap will be <cap> + 2 * <cap_increment>
+        If there are to be no increments between periods, then set the 4 increments to 0 (zero).
+        Please don't set the increments to 'na'
+      -->
+
+	    <coupon_details>
+        <coupon_specification>          
+          <start_period>      1 </start_period> 
+          <end_period>        2 </end_period>   
+          <cap>           0.025 </cap>                      
+          <floor>         0.025 </floor>
+          <factor>            0 </factor> 
+	        <strike>            0 </strike> 
+          <cap_increment>     0 </cap_increment>
+          <floor_increment>   0 </floor_increment>
+	        <factor_increment>  0 </factor_increment>
+          <strike_increment>0.01 </strike_increment>	 
+        </coupon_specification>
+
+        <coupon_specification>
+          <start_period>      3 </start_period>
+          <end_period> maturity </end_period>
+          <cap>              na </cap>
+          <floor>             0 </floor>
+          <factor>    0.0001177 </factor>    <!-- 0.125 / 106.2 = 0.0001177 -->
+          <strike>          0.1 </strike>
+          <cap_increment>     0 </cap_increment>
+          <floor_increment>   0 </floor_increment>
+          <factor_increment>  0 </factor_increment>
+          <strike_increment>-10 </strike_increment>
+        </coupon_specification>
+
+      </coupon_details>
+    </call_spread_cpn_note>
+  </contract>
+</portfolio>

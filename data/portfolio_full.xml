@@ -1,0 +1,140 @@
+<portfolio>
+  
+  <contract>
+    <contract_category>         equity_linked_note  </contract_category>
+    <contract_id>               XS9234123           </contract_id>
+
+    <equity_linked_note>
+      <start_date>              15-May-2010         </start_date>
+      <final_observation_date>  15-May-2015         </final_observation_date>
+      <final_settlement_date>   15-May-2015         </final_settlement_date>
+      <strike_price>            123.4               </strike_price>
+      <notional>                1000000             </notional>
+      <notional_currency>       HKD                 </notional_currency>
+      <underlying_stock_id>     0005.HK             </underlying_stock_id>
+      <stock_id_type>           EXCHANGE            </stock_id_type>
+    </equity_linked_note>
+    
+  </contract>
+
+
+  <contract>
+    <contract_category>  range_accrual </contract_category>
+    <contract_id>   range_accrual_0001 </contract_id>
+
+    <range_accrual>
+      <underlying_type>             fx </underlying_type>
+      <accounting_ccy>             JPY </accounting_ccy>
+      <!-- AKA accounting currency -->
+      <underlying_ccy>             USD </underlying_ccy>
+      <underlying_id_type>     fx_pair </underlying_id_type>
+      <start_date>          2-Jun-2006 </start_date>
+      <maturity_date>       2-Jun-2021 </maturity_date>
+      <months_per_period>            6 </months_per_period>
+      <coupon_initial>            0.03 </coupon_initial>
+      <coupon_step>              0.001 </coupon_step>
+      <low_barrier_initial>      93.50 </low_barrier_initial>
+      <low_barrier_step>          -0.5 </low_barrier_step>
+      <settlement_lag>               3 </settlement_lag>
+      <!--Num bus days from obs to settle -->
+      <notional>               1000000 </notional>
+
+      <holiday_calendars>
+        <id>TOK</id>
+        <id>NYC</id>
+        <id>LON</id>
+      </holiday_calendars>
+
+    </range_accrual>
+  </contract>
+
+  <contract>
+    <contract_category>            accumulator  </contract_category>
+    <contract_id>                   accum_0001  </contract_id>
+    
+    <accumulator>
+      <first_accumulation_date>    10-Apr-2010  </first_accumulation_date>
+      <strike_price>                     108.8  </strike_price>
+      <ref_spot>                         128.2  </ref_spot>
+      <ko_price>                         135.6  </ko_price>
+
+      <!-- KO settlement can be either at the period end, i.e.  
+           when there is a Knock-Out event the settlement will be at the regular 
+           period end settlement date. Alternatively KO settlement can be 
+           the settle_lag number of business days after the KO event.  -->
+      <ko_settlement_at_period_end>        true  </ko_settlement_at_period_end>
+      <!-- must be 'true' or 'false'-->
+
+      <shares_per_day>                       20  </shares_per_day>
+
+      <!-- Position size is the number of accumulators held, 
+           It will often be 1, but it could be some larger number.
+           A minus number indicates a short position. -->
+      <position_size>                        1  </position_size>
+
+      <!-- Twice the number of shares accumulate on each day that the underlying 
+           closes below the gearing price. -->
+      <gearing_price>                        0  </gearing_price>
+      <gearing_multiplier>                   1  </gearing_multiplier>
+      <!-- Gearing of 1 has no effect! -->
+      <!-- In a note form accumulator, (maxSharesThatCouldBeDelivered * strike) is paid upfront. -->
+      <note_or_swap>                      swap  </note_or_swap>
+      <accum_or_decum>                   accum  </accum_or_decum>
+      <!-- accumulate or decumulate           -->
+
+      <underlying_id>                 0005.HK  </underlying_id>
+      <underlying_id_type>            EXCHANGE  </underlying_id_type>
+
+      <settlement_lag>                       3  </settlement_lag>
+
+      <!-- Accumulators sometimes have some guaranteed accumulation at the start.
+           When that is the case need, to specify the last guaranteed accumulation date. -->
+      <has_guaranteed_accumulation>      false  </has_guaranteed_accumulation>
+      <!-- Only need 'last_guaranteed_accum_date' parameter when 'has_guaranteed_accum' is true. -->
+      <last_guaranteed_accum_date> 09-May-2010  </last_guaranteed_accum_date>
+
+      <!-- first_ko_date <= last_guaranteed_accum_date  -->
+      <first_ko_date>              10-Apr-2010  </first_ko_date>
+
+      <period_end_dates>
+        <!-- The last accumulation date in each period. -->
+        <date>    10-May-2010  </date>
+        <date>    09-Jun-2010  </date>
+        <date>    09-Jul-2010  </date>
+        <date>    09-Aug-2010  </date>
+        <date>    09-Sep-2010  </date>
+        <date>    11-Oct-2010  </date>
+        <date>    09-Nov-2010  </date>
+        <date>    09-Dec-2010  </date>
+        <date>    10-Jan-2011  </date>
+        <date>    09-Feb-2011  </date>
+        <date>    09-Mar-2011  </date>
+        <date>    11-Apr-2011  </date>
+      </period_end_dates>
+
+    </accumulator>
+
+  </contract>
+
+
+  <contract>
+    <contract_category>         convertible_bond     </contract_category>
+    <contract_id>               convert_0001         </contract_id>
+    <convertible_bond>
+      <issue_date>              10-Apr-2010          </issue_date>
+      <final_exercise_date>     10-Apr-2011          </final_exercise_date>
+      <coupon>                  0.5                  </coupon>
+      <month_between_coupons>   12                   </month_between_coupons>
+      <redemption>              100                  </redemption>
+      <currency>                HKD                  </currency>
+      <number_of_bonds>         1                    </number_of_bonds>
+      <conversion_ratio>        10                   </conversion_ratio>
+      <underlying_stock_id>     0005.HK              </underlying_stock_id>
+      <stock_id_type>           EXCHANGE             </stock_id_type>
+    </convertible_bond>
+  </contract>
+
+
+
+
+</portfolio>

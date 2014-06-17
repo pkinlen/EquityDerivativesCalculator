@@ -1,0 +1,59 @@
+<portfolio>
+
+  <contract>
+    <contract_category>  range_accrual </contract_category>
+    <contract_id>   range_accrual_eq0001 </contract_id>
+
+    <range_accrual>
+      <underlying_type>         equity </underlying_type>
+      <payout_ccy>                 HKD </payout_ccy>
+      <underlying_id>          0005.HK </underlying_id>    <!-- can be either an equity ID or a currency ISO code-->
+      <underlying_id_type>         ric </underlying_id_type>
+      <start_date>          2-Jun-2006 </start_date>
+      <maturity_date>       2-Jun-2021 </maturity_date>
+      <months_per_period>            6 </months_per_period>
+      <coupon_initial>            0.03 </coupon_initial>
+      <coupon_step>              0.001 </coupon_step>
+      <low_barrier_initial>      93.50 </low_barrier_initial>
+      <low_barrier_step>          -0.5 </low_barrier_step>
+      <settlement_lag>               3 </settlement_lag>    <!--Num bus days from obs to settle -->
+      <notional>               1000000 </notional>
+
+      <holiday_calendars>
+        <id>TOK</id>
+        <id>NYC</id>
+        <id>LON</id>
+      </holiday_calendars>
+
+    </range_accrual>
+  </contract>
+
+  <contract>
+    <contract_category>  range_accrual </contract_category>
+    <contract_id>   range_accrual_fx0001 </contract_id>
+
+    <range_accrual>
+      <underlying_type>             fx </underlying_type>
+      <payout_ccy>                 JPY </payout_ccy>      <!-- AKA accounting currency -->
+      <underlying_id>              USD </underlying_id>   <!-- can be either an equity ID or a currency ISO code-->
+      <underlying_id_type>     fx_pair </underlying_id_type>
+      <start_date>         03-Jun-2010 </start_date>
+      <maturity_date>      03-Jun-2013 </maturity_date>
+      <months_per_period>            6 </months_per_period>
+      <coupon_initial>            0.03 </coupon_initial>
+      <coupon_step>              0.001 </coupon_step>
+      <low_barrier_initial>      93.50 </low_barrier_initial>
+      <low_barrier_step>          -0.5 </low_barrier_step>
+      <settlement_lag>               3 </settlement_lag> <!--Num bus days from obs to settle -->
+      <notional>               1000000 </notional>
+
+      <holiday_calendars>
+        <id>TOK</id>
+        <id>NYC</id>
+        <id>LON</id>
+      </holiday_calendars>
+
+    </range_accrual>
+  </contract>
+
+</portfolio>
